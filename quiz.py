@@ -21,7 +21,8 @@ def run_quiz():
         else:
             print(f"Wrong. The answer was {q['answer'].title()}.")
 
-    print(f"\nYou scored {score}/{len(shuffled)}")
+    percentage = round(score / len(shuffled) * 100)
+    print(f"\nYou scored {score}/{len(shuffled)} ({percentage}%)")
 
 
 def main():
