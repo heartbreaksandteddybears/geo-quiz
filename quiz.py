@@ -25,6 +25,7 @@ def run_quiz():
 
 
 def main():
+    print("Welcome to the Geo Quiz! Test your geography knowledge.\n")
     play_again = "y"
     while play_again == "y":
         run_quiz()
