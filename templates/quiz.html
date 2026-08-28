@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geo Quiz</title>
+</head>
+<body>
+    <h1>Geo Quiz</h1>
+    <form method="POST" action="/submit">
+        {% for q in questions %}
+        <p>
+            {{ q.question }}
+            <input type="text" name="answer_{{ loop.index0 }}">
+            <input type="hidden" name="correct_{{ loop.index0 }}" value="{{ q.answer }}">
+        </p>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
